@@ -23,3 +23,6 @@ To install project dependencies, run below commands
 mvn install
 mvn spring-boot:run
 ```
+
+## Testing the Application
+You can test the queries on your local by using `GraphiQL`. You can access `GraphiQL` from http://localhost:8080/graphiql when the app is running on your local environment.
