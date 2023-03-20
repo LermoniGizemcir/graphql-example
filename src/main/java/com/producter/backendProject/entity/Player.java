@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.util.UUID;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 import org.hibernate.annotations.Type;
 
@@ -20,8 +21,13 @@ public class Player{
 	@Type(type = "uuid-char")
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
+	
+	@NotBlank
     private String name;
+	
+	@NotBlank
     private String surname;
+	
     private String position;
 	
 	

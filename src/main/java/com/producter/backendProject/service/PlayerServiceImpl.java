@@ -16,11 +16,17 @@ import lombok.AllArgsConstructor;
 public class PlayerServiceImpl implements PlayerService {
 	@Autowired
 	private final PlayerRepository playerRepository = null;
+	private static Integer MAX_PLAYER_COUNT = 12; 
 	
 	@Override
 	public Player createPlayer(Player player) {
-		// name & surname must be a non-empty string - invalid input error
+		Long existingPlayerCount = playerRepository.count();
+		
 		// allow creation if playerList length < 12  - max capacity error
+		if(existingPlayerCount >= MAX_PLAYER_COUNT) {
+			return null;
+		}
+		
 		return playerRepository.save(player);
 	}
 	
