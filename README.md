@@ -1,5 +1,6 @@
 # graphql-example
 A Spring Boot - Graphql Service Application
+Test on https://graphqlexample.herokuapp.com/graphiql?path=/graphql
 
 ## Tech Stack
 - Java 11
